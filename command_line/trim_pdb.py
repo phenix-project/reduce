@@ -1,3 +1,4 @@
+from __future__ import print_function
 # LIBTBX_SET_DISPATCHER_NAME phenix.trim_pdb
 
 import libtbx.phil.command_line
@@ -53,7 +54,7 @@ def run (args=(), params=None, out=sys.stdout) :
     os.remove(pdb_out)
   easy_run.call("phenix.reduce -Trim %s > %s" % (pdb_in, pdb_out))
   if os.path.exists(pdb_out) :
-    print "Wrote %s" % pdb_out
+    print("Wrote %s" % pdb_out)
     return pdb_out
   else :
     return None

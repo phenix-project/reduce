@@ -1,3 +1,4 @@
+from __future__ import print_function
 ##################################################################################
 # This program is a rewrite of a subset of the main.cpp Reduce program into
 # Python that makes use of the shared library that is produced using Boost.Python.
@@ -78,7 +79,7 @@ if __name__ == '__main__':
       fileName = sys.argv[i]
 
   if len(fileName) == 0:
-    print('Usage:', sys.argv[0], "[-TRIM] PDB_FILE_NAME")
+    print(('Usage:', sys.argv[0], "[-TRIM] PDB_FILE_NAME"))
     sys.exit(-2)
 
   with open(fileName) as f:

@@ -1,3 +1,4 @@
+from __future__ import print_function
 from libtbx import easy_run
 from libtbx.utils import Usage, file_size
 import random
@@ -19,7 +20,7 @@ def run(args):
     if (not os.path.isfile(pdb)): continue
     if (file_size(file_name=pdb) > 1000000): continue
     cmd = "reduce/exe/reduce " + pdb
-    print cmd
+    print(cmd)
     results = easy_run.fully_buffered(command=cmd)
     results.show_stderr()
 
