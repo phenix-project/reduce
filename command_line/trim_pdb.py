@@ -41,7 +41,7 @@ def run (args=(), params=None, out=sys.stdout) :
       else :
         try :
           arg_phil.append(interpreter.process(arg=arg))
-        except RuntimeError, e :
+        except RuntimeError as e :
           raise Sorry("Parser error at '%s': %s" % (arg, str(e)))
     params = master_phil.fetch(sources=arg_phil).extract()
   validate_params(params)
